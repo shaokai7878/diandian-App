@@ -1,2 +1,2 @@
-# git
-# github
+# 《点点》APP
+这是点点APP的项目实训
