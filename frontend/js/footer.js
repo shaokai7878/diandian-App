@@ -1,0 +1,104 @@
+var home=document.getElementById('home');
+var home01=document.getElementById('home01');
+var mom = document.getElementById('mom');
+var mom01 = document.getElementById('mom01');
+var fujin = document.getElementById('fujin');
+var fujin01 =document.getElementById('fujin01');
+var car = document.getElementById('car');
+var car01 = document.getElementById('car01');
+var my =document.getElementById('my');
+var my01 = document.getElementById('my01');
+var p1=document.getElementById('p1');
+var p2=document.getElementById('p2');
+var p3=document.getElementById('p3');
+var p4=document.getElementById('p4');
+var p5=document.getElementById('p5');
+home.onclick=function(){
+	home.style.display='none';
+	home01.style.display='block';
+	mom.style.display='block';
+	mom01.style.display='none';
+	car.style.display='block';
+	car01.style.display='none';
+	my.style.display='block';
+	my01.style.display='none';
+	fujin.style.display='block';
+	fujin01.style.display='none';
+	p1.style.color='red';
+	p2.style.color='black';
+	p3.style.color='black';
+	p4.style.color='black';
+	p5.style.color='black';
+}
+
+mom.onclick=function(){
+	mom.style.display='none';
+	mom01.style.display='block';
+	home.style.display='block';
+	home01.style.display='none';
+	car.style.display='block';
+	car01.style.display='none';
+	my.style.display='block';
+	my01.style.display='none';
+	fujin.style.display='block';
+	fujin01.style.display='none';
+	p2.style.color='red';
+	p1.style.color='black';
+	p3.style.color='black';
+	p4.style.color='black';
+	p5.style.color='black';
+}
+
+fujin.onclick=function(){
+	fujin.style.display='none';
+	fujin01.style.display='block';
+	home.style.display='block';
+	home01.style.display='none';
+	mom.style.display='block';
+	mom01.style.display='none';
+	my.style.display='block';
+	my01.style.display='none';
+	car.style.display='block';
+	car01.style.display='none';
+	p3.style.color='red';
+	p2.style.color='black';
+	p1.style.color='black';
+	p4.style.color='black';
+	p5.style.color='black';
+}
+
+car.onclick=function(){
+	car.style.display='none';
+	car01.style.display='block';
+	home.style.display='block';
+	home01.style.display='none';
+	mom.style.display='block';
+	mom01.style.display='none';
+	fujin.style.display='block';
+	fujin01.style.display='none';
+	my.style.display='block';
+	my01.style.display='none';
+	p4.style.color='red';
+	p2.style.color='black';
+	p3.style.color='black';
+	p1.style.color='black';
+	p5.style.color='black';
+}
+
+my.onclick=function(){
+	my.style.display='none';
+	my01.style.display='block';
+	home.style.display='block';
+	home01.style.display='none';
+	mom.style.display='block';
+	mom01.style.display='none';
+	fujin.style.display='block';
+	fujin01.style.display='none';
+	car.style.display='block';
+	car01.style.display='none';
+	p5.style.color='red';
+	p2.style.color='black';
+	p3.style.color='black';
+	p4.style.color='black';
+	p1.style.color='black';
+}

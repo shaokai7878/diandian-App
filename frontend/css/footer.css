@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+#footer{
+	width: 100%;
+	text-align: center;
+}
+.footer_nav{
+	float: left;
+	text-align: center;
+	margin: 10px;
+}
+a{
+	color: black;	
+}
+.footer_nav img{
+	width: 50px;
+	height:50px;
+}
