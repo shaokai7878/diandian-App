@@ -1,0 +1,41 @@
+<ion-header>
+  
+    <ion-navbar color="theme"> 
+      <div style="position: absolute;left: 15.5%;top: 10px;border-bottom: #fff solid 1px;width: 80%;">
+        <img src="assets/imgs/search.png" alt="" style="width: 25px;position: relative;left: 0;top: 0;">
+        <input type="text" style="width: 75%;font-size: 20px;position: relative;left: 0;top: 0;border-style: none;background-color: #faae96;">
+      </div>
+    </ion-navbar>
+    
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <div class="classify-div1">
+      <p class="div1-p1" style="color:red;background-color: #f4f1f1;">热门</p>
+      <p class="div1-p1">进口</p>
+      <p class="div1-p1">食品</p>
+      <p class="div1-p1">服装</p>
+      <p class="div1-p1">用品</p>
+      <p class="div1-p1">出行</p>
+      <!-- <ion-segment [(ngModel)]="appType">
+        <ion-segment-button value="message"class='message' >
+            找信息
+        </ion-segment-button>
+        <ion-segment-button value="serve" class="tou">
+            找服务
+        </ion-segment-button>
+      </ion-segment> -->
+    </div>
+    <div class="classify-div2">
+      <div class="div2-div1">
+        <p class="div2-p1">热门</p>
+        <div class="div2-hot" *ngFor="let item of getItems(appType)" (click)="about()">
+          <img src="{{item.path}}" alt="" class="div2-img1">
+          <p class="div2-p2">{{item.name}}</p>
+        </div>
+      </div>
+      <div class="div2-div1"></div>
+    </div>
+  </ion-content>
+  
