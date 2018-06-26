@@ -1,0 +1,23 @@
+1、客户端用户登陆   admin_table
+    ID          int
+    username    varchar(32)
+    password    varchar(32)
+
+2、管理员用户登陆   user_table
+    ID          int
+    username    varchar(32)
+    email       varchar(32)
+    pic_header  varchar(300)
+
+3、博客      blog_table
+    ID          int
+    title       varchar(200)
+    summary     varchar(500)
+    author      varchar(32)
+    href        varchar(300)
+4.  商品     shop_table
+    ID          int
+    title       varchar(200)
+    summary     varchar(500)
+    author      varchar(32)
+    href        varchar(300)
