@@ -1,7 +1,7 @@
-ejs-express-mysql
+﻿ejs-express-mysql
 ==
 
-###[基于express，MySQL，ejs实现的一个简单基本的网站后台管理应用](https://github.com/Nealyang/ejs-express-mysql)
+###[基于express，MySQL，ejs实现的一个简单基本的网站后台管理应用]
 
 ##前言
 也是这两周才正式的接触node，虽然在前端开发中我们常常说前后端分离，但是在学习过程中，个人感觉还是要刁难刁难自己的。因为用ejs来写前端页面。
@@ -9,9 +9,7 @@ ejs-express-mysql
 关于登录，查询等操作本应该更加的严谨，这里只做简单演示。包括一些配置文件的编写。
     
 ---
-喜欢的朋友方便的话可以给个star  (＾－＾)V
 
-顺便推广一波nodejs技术交流群，群号:209530601
 ***
 
 >ejs mysql nodejs express express-router...
@@ -24,7 +22,6 @@ ejs-express-mysql
 整体操作流程图
 ![操作图](./resources/show.gif)
 
-**GIF Brewery转gif真的有点。。。好吧，不吐槽了，后面会分开讲解每一步，好在基本操作还能看得清~**
 
 
 后台管理首页
