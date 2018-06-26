@@ -1,0 +1,89 @@
+<ion-header class="header">
+  <ion-navbar color="theme" class="nav">
+    <ion-buttons>
+      <button ion-button icon-only (click)="goSet()">
+        <ion-icon name="settings" ></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end >
+      <button ion-button icon-only>
+          <ion-icon name="text" ></ion-icon>
+        </button>
+      </ion-buttons>   
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="imges">
+    <img src="assets/imgs/geren.jpeg" alt="">
+  </div>
+  <div class="row responsive-sm">
+    <div class="col">
+      我的关注<br>
+      70
+    </div>
+    <div class="col">
+      我的收藏<br>
+      65
+    </div>
+    <div class="col">
+      我的足迹<br>
+      192
+    </div>
+  </div>
+    <div class="items" >
+        <div class="p1">我的订单</div>
+        <div id="p2">查看更多订单</div>
+    </div>
+    <div class="row responsive-sm">
+        <div class="col">
+          <img src="assets/imgs/fukan.png" alt="">
+          <br>
+          代付款
+        </div>
+        <div class="col">
+          <img src="assets/imgs/fahuo.png" alt=""><br>
+          代发货
+        </div>
+        <div class="col">
+          <img src="assets/imgs/souhuo.png" alt=""><br>
+          待收货
+        </div>
+        <div class="col">
+          <img src="assets/imgs/pinjia.png" alt=""><br>
+          待评价
+        </div>
+        <div class="col">
+          <img src="assets/imgs/tui.png" alt=""><br>
+          退款/售后
+          </div>
+      </div>
+      <div class="caifu">
+        <div style="margin:5px;">我的财富</div>
+        <div class="money">
+        <div class="row responsive-sm">
+          <div class="col">
+                  0<br>
+                现金劵
+          </div>
+          <div class="col">
+                    0<br>
+                    点币
+          </div>
+          <div class="col">
+                    0<br>
+                    余额
+          </div>
+          <div class="col">
+                      0<br>
+                      红包
+          </div>                    
+        </div>
+        </div>
+      </div>
+      <ion-list>
+          <button ion-item *ngFor="let item of items" (click)="goSet()">
+          {{item.title}}
+          <a href=""><img src="assets/imgs/right.png" alt="" style="position: absolute;right:10px;height: 20px;margin: 5px;"></a>
+          </button>
+      </ion-list>
+</ion-content>

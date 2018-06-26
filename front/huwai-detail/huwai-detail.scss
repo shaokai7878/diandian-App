@@ -1,0 +1,27 @@
+page-huwai-detail {
+    .left{
+        width: 40%;
+        float: left;
+        height: 28%;
+        margin-bottom: 2%;
+    }
+    .left img{
+        height: 88%;
+        width: 88%;
+        margin: 6%;
+    }
+    .middle{
+        width: 48%;
+        float: left;
+        text-align: center;
+        height: 28%;
+        font-size: 20px;
+        margin-bottom: 2%;
+    }   
+    .list ion-item{
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+        margin:3% 0;
+    }
+
+}

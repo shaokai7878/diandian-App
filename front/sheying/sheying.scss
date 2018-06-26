@@ -1,0 +1,40 @@
+page-sheying {
+    .search{
+        width: 80%;
+        border: 1px solid white;
+        height: 30px;
+        margin: 0 5%;
+    }
+    .list ion-item{
+        border-bottom:1px solid gray;
+        border-top:1px solid gray;
+        padding: 0;
+        margin: 3% 0;
+        height: 115px;
+    }
+    .left{
+        width: 33%;
+        float: left;
+    }
+    .left img{
+        height: 95px;
+        border: none;
+        width: 100%;
+    }
+    .middle{
+        width: 52%;
+        float: left;
+        text-align: center;
+        height: 90px;
+        font-size: 20px;
+    }
+    .middle p{
+        font-size: 20px;
+        margin-top: 100%;
+    }
+    .right{
+        width: 15%;
+        float: right;
+        height: 90px;
+    }
+}

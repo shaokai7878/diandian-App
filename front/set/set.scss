@@ -1,0 +1,32 @@
+page-set {
+    *{
+        margin: 0px;
+        padding:0px;
+    }
+    .header{
+        height: 36px;
+    }
+    .toolbar-md {
+        min-height: 36px;
+        padding: 0px;
+    }
+    .lists{
+        border:1px solid ;
+        border-color:#bbbbbb;
+        border-left:0px; 
+        border-right:0px; 
+        border-top:0px; 
+    }
+    .lists img{
+        position: absolute;
+        right:10px;
+        height: 20px;
+        margin: 5px;
+    }
+    .layout{
+        width: 90%;
+        height: 8%;
+        margin: 5%;
+        background: #faae96;
+    }
+}

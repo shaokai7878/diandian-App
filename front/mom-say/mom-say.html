@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="theme">
+    <div style="position: absolute;left: 10.5%;top: 10px;border-bottom: #fff solid 1px;width: 80%;">
+      <img src="assets/imgs/search.png" alt="" style="width: 25px;position: relative;left: 0;top: 0;">
+      <input type="text" style="width: 75%;font-size: 20px;position: relative;left: 0;top: 0;border-style: none;background-color: #faae96;">
+    </div>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list class="list" >
+    <ion-item (click)="GoWritingDetail()">
+      <div class="middle">
+        初冬来临，妈咪们需注意啦
+      </div>
+    </ion-item>
+    <ion-item (click)="GoWritingDetail()">
+      <div class="middle">
+        初冬来临，妈咪们需注意啦
+      </div>
+    </ion-item>
+    <ion-item (click)="GoWritingDetail()">
+      <div class="middle">
+        初冬来临，妈咪们需注意啦
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-fab bottom right edge style="position: absolute;
+  bottom: 5%;">
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top" >
+      <button ion-fab (click)="collecting()"><ion-icon name="md-star-outline"></ion-icon></button>
+      <button ion-fab (click)="writing()"><ion-icon name="md-create"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

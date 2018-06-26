@@ -1,0 +1,16 @@
+
+<ion-content padding>
+  <img src="assets/imgs/touxiang.png">
+  <ion-input type="text" placeholder="用户名:"style="border:1px solid #faae96;margin:2%;width:92%;"></ion-input>
+  <ion-input type="password" placeholder="密　码:"style="border:1px solid #faae96;margin:2%;width:92%;"></ion-input>
+  <p style="float:right;color:#faae96;">忘记密码</p>
+  <div padding>
+    <button ion-button color="theme"(click)="goTabs()"
+     style="width:100%;"round>登陆</button>
+  </div>
+  <p style="color:#faae96;text-align:center;">—————————使用社交账号登陆—————————</p>
+  <ion-icon class="icon1" name="logo-tux" color="theme"></ion-icon>
+  <ion-icon class="icon2" name="logo-twitch" color="theme"></ion-icon>
+  <ion-icon class="icon3" name="logo-twitter" color="theme"></ion-icon>
+  <p style="color:#faae96;float:right;margin-top:30%;"(click)="goRegister()">新用户注册</p>
+</ion-content>
