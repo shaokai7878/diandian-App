@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar color="theme">        
+    <ion-title  style="position: absolute;top: 25%;left: 35%;">消息中心</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <div class="messagelist-div1" >             
+        <ion-item detail-push class="messagelist-item1" (click)="message()"> 
+          <ion-icon name="paper" color="theme" class="messagelist-icon1"></ion-icon>   
+          <p class="messagelist-p1">点点育儿</p>
+        </ion-item>
+        <ion-item detail-push class="messagelist-item1" (click)="message()"> 
+          <ion-icon name="chatboxes" color="theme" class="messagelist-icon1"></ion-icon>     
+          <p class="messagelist-p1">回复我的</p>
+        </ion-item>
+        <ion-item detail-push class="messagelist-item1" (click)="message()"> 
+          <ion-icon name="mail" color="theme" class="messagelist-icon1"></ion-icon>
+          <p class="messagelist-p1">系统通知</p>
+        </ion-item>
+      </div>    
+  </ion-list>   
+</ion-content>
