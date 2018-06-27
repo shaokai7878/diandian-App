@@ -11,16 +11,16 @@
 
 后台采用node.js的express框架编写，数据库使用mysql进行交互。
 
-(./front./resorces/login.png)
+(./front/resorces/login.png)
 
-(./front./resorces/about.png)
+(./front/resorces/about.png)
 
-(./front./resorces/mom-say.png)
+(./front/resorces/mom-say.png)
 
-(./front./resorces/write.png)
+(./front/resorces/write.png)
 
-(./front./resorces/fujin.png)
+(./front/resorces/fujin.png)
 
-(./front./resorces/car.png)
+(./front/resorces/car.png)
 
-(./front./resorces/mine.png)
+(./front/resorces/mine.png)
