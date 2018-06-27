@@ -19,11 +19,6 @@
 登录页
 ![登录页](./resources/login.png)
 
-整体操作流程图
-![操作图](./resources/show.gif)
-
-
-
 后台管理首页
 ![后台管理首页](./resources/index.png)
 
