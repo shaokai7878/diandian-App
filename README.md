@@ -10,3 +10,17 @@
 前端页面框架，我们选用的是ionic。底部代码统一，主题色调统一。
 
 后台采用node.js的express框架编写，数据库使用mysql进行交互。
+
+(./resorces/login.png)
+
+(./resorces/about.png)
+
+(./resorces/mom-say.png)
+
+(./resorces/write.png)
+
+(./resorces/fujin.png)
+
+(./resorces/car.png)
+
+(./resorces/mine.png)
