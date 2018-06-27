@@ -1,8 +1,8 @@
 
 <ion-content padding>
   <img src="assets/imgs/touxiang.png">
-  <ion-input type="text" placeholder="用户名:"style="border:1px solid #faae96;margin:2%;width:92%;"></ion-input>
-  <ion-input type="password" placeholder="密　码:"style="border:1px solid #faae96;margin:2%;width:92%;"></ion-input>
+  <ion-input type="text" placeholder="用户名:"style="border:1px solid #faae96;margin:2%;width:92%;" [(ngModel)]="username"></ion-input>
+  <ion-input type="password" placeholder="密　码:"style="border:1px solid #faae96;margin:2%;width:92%;"[(ngModel)]="password"></ion-input>
   <p style="float:right;color:#faae96;">忘记密码</p>
   <div padding>
     <button ion-button color="theme"(click)="goTabs()"

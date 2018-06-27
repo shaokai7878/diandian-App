@@ -7,29 +7,22 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-list class="list" >
-    <ion-item (click)="GoWritingDetail()">
-      <div class="middle">
-        初冬来临，妈咪们需注意啦
-      </div>
-    </ion-item>
-    <ion-item (click)="GoWritingDetail()">
-      <div class="middle">
-        初冬来临，妈咪们需注意啦
-      </div>
-    </ion-item>
-    <ion-item (click)="GoWritingDetail()">
-      <div class="middle">
-        初冬来临，妈咪们需注意啦
-      </div>
-    </ion-item>
-  </ion-list>
-  <ion-fab bottom right edge style="position: absolute;
-  bottom: 5%;">
-    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
-    <ion-fab-list side="top" >
-      <button ion-fab (click)="collecting()"><ion-icon name="md-star-outline"></ion-icon></button>
-      <button ion-fab (click)="writing()"><ion-icon name="md-create"></ion-icon></button>
-    </ion-fab-list>
-  </ion-fab>
+    <ion-list>
+      <ion-item (click)="GoWritingDetail()" *ngFor="let item of blog_list">
+        <div class="middle">  
+          {{item.title}}
+          <!-- 编号:{{item.ID}}
+          作者:{{item.author}}
+          链接{{item.href}}
+          摘要:{{item.summary}} -->
+        </div>  
+      </ion-item>
+    </ion-list>
+    <ion-fab bottom right edge style="position: absolute;bottom: 5%;">
+      <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+      <ion-fab-list side="top" >
+        <button ion-fab (click)="collecting()"><ion-icon name="md-star-outline"></ion-icon></button>
+        <button ion-fab (click)="writing()"><ion-icon name="md-create"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
 </ion-content>

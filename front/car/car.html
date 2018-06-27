@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="theme">
+    <ion-title>购物车</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of shop_list,let i = index">
+        <img src="assets/imgs/logo.jpg">
+        <p style="width:62%;float:right;">{{item.username}}</p>
+        <span style="color:orange; margin-right:10%;display:inline-block;">￥{{item.ID}}</span>
+        <img src="assets/imgs/add.png" style="width: 15px;height: 15px"(click)="addNum(i);"/>
+        <label style="margin-left: 5px;margin-right: 5px">{{item.count}}</label>
+        <img src="assets/imgs/reduce.png" style="width: 15px;height: 15px;margin-right:15%;"(click)="reduceNum(i);"/>  
+        <input class="check" type="checkbox" (click)="calculate()">
+    </ion-item>
+  </ion-list>
+  <div style="text-align:center;overflow:hidden;width:100%;height:8%;background-color:lavender;">
+    <p style="color:orangered;">-> ★　可能你还喜欢 <-</p>
+  </div>
+  <div class="jiesuan">
+    <p style="display:inline-block;width:20%;"><input type="checkbox"(click)="numAllPrice($event)" style="margin:9% 19% 0% 10%;">全选:</p>
+    <button style="height: 100%;float: right;width: 20%;background-color: orangered;">结算</button>
+    <p style="display:inline-block;float:right;margin:4%">合计：<span style="color:orangered">￥{{allPrice}}</span></p>
+  </div>
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar color="#fff"> 
+    <!-- <ion-icon name="md-arrow-back" style="font-size:26px;"(click)="back()"></ion-icon> -->
+    <ion-segment [(ngModel)]="appType">
+        <ion-segment-button class='goods' style="width:60px;height: 40px;line-height: 40px;position: absolute;left:18%;top:9px;font-size:18px;border-bottom:red solid 0.1px; color:black;">
+          <p>商品</p>
+        </ion-segment-button>
+        <ion-segment-button  class="detail" style="width:60px;height: 40px;line-height: 40px;position: absolute;left: 42%;top:9px;border-bottom: #fff solid 0.1px;">
+            <p style="font-size:18px;color:black;">详情</p>
+        </ion-segment-button>
+        <ion-segment-button  class="pingjia" style="width:60px;height: 40px;line-height: 40px;position: absolute;left:66%;top:9px;border-bottom: #fff solid 0.1px;">
+            <p style="font-size:18px;color:black;">评价</p>
+        </ion-segment-button>
+      </ion-segment>
+    <ion-buttons end>
+      <button ion-button class="detail-share">
+        <ion-icon name="share" color="dark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides loop="true" class="slide">
+    <ion-slide >
+      <img src="assets/imgs/slides.jpeg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/slides1.jpeg">
+    </ion-slide>
+    <ion-slide >
+      <img src="assets/imgs/slides.jpeg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/slides1.jpeg">
+    </ion-slide>
+  </ion-slides>
+  <div class="detail-des">
+    <p class="detail-price">￥485</p>
+    <p class="detail-person">2379819人已购</p>
+    <p class="detail-desribe">秋冬季夹棉尚服保暖套装纯棉婴儿保暖内衣三件套秋冬季夹棉尚服保暖套装纯棉婴儿保暖内衣</p>
+  </div>
+  <div class="detail-promise">
+    <p class="promise-p1">承诺</p>
+    <p class="promise-p2">72小时内发货</p>
+  </div>
+  <div class="detail-paid">
+    <p class="paid-p1">运费</p>
+    <p class="paid-p2">本商品两件包邮</p>
+  </div>
+  <div class="detail-return">
+    <p class="return-p1">点币</p>
+    <p class="return-p2">返47点币</p>
+  </div>
+  <div class="detail-chance" (click)="presentPopover($event)">
+    <p class="chance-p1">选择</p>
+    <p class="chance-p2">分类颜色</p>
+    <img src="assets/imgs/right.png" alt="" style="position: absolute;height:20px;margin:5% 92%;">
+  </div>
+  <div class="bottom-button">
+    <ion-icon name="md-star-outline" class="bottom-store"></ion-icon>
+    <p class="store">店铺</p>
+    <ion-icon name="md-star-outline" class="bottom-star"></ion-icon>
+    <p class="star">收藏</p>
+    <p class="bottom-cart" (click)="presentPopover($event)">加入购物车</p>
+    <p class="bottom-buy" (click)="presentPopover($event)">立即购买</p>
+  </div>
+</ion-content>

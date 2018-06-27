@@ -7,10 +7,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <p style="height:25px; border-bottom: gainsboro solid 1px; color: gainsboro">请输入标题...</p>
-  <p style="color:gainsboro">正文...</p>
-  <div class="cont"></div>
+  <input class="biaoti" type="text"placeholder="请输入标题..."[(ngModel)]="title">
+  <textarea class="wenben" placeholder="正文"[(ngModel)]="summary"></textarea>
   <img src="assets/imgs/zhongcao1.jpg" style="width:106px; height:100px;"/>
-  <p  style="height:25px; border-bottom: gainsboro solid 1px;">显示地点&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=" color: gainsboro">河北省石家庄市裕华区河北师范大学</span><ion-icon md="md-locate" style="color: gainsboro"></ion-icon></p>
-  <p>添加封面图片</p>
+  <p>插入链接:<input type='text'[(ngModel)]="href" style="width:83%"></p>
+  <p>作　　者:<input type="text" placeholder="" [(ngModel)]="author" style="width:83%"></p>
+  <button ion-button color="theme" style="width:100%" round (click)="write()">发表文章</button>
 </ion-content>

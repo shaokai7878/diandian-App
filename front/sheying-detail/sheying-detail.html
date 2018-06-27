@@ -17,7 +17,7 @@
         <ion-icon name="home">去过321</ion-icon>
       </button>
       <button style="margin:0;float:left;width:50%;" ion-button color="theme" round outline>
-        <ion-icon name="star">想去432</ion-icon>
+        <ion-icon name="star" (click)="presentPopover($event)">想去432</ion-icon>
       </button>
     </div>
     <ion-list class="list">

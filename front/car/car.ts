@@ -1,7 +1,6 @@
-
-import { Component,Directive } from '@angular/core';
-import { IonicPage, NavController, NavParams,Platform,ViewController } from 'ionic-angular';
-
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams, Checkbox } from 'ionic-angular';
+import { Http,Jsonp} from'@angular/http';
 /**
  * Generated class for the CarPage page.
  *
@@ -9,93 +8,82 @@ import { IonicPage, NavController, NavParams,Platform,ViewController } from 'ion
  * Ionic pages and navigation.
  */
 
-//@Directive({ selector: '[ngSwitch]' })
 @IonicPage()
 @Component({
   selector: 'page-car',
   templateUrl: 'car.html',
-  template: `
-    <ion-list>
-      <ion-list-header>Ionic</ion-list-header>
-      <button ion-item (click)="close()">Learn Ionic</button>
-      <button ion-item (click)="close()">Documentation</button>
-      <button ion-item (click)="close()">Showcase</button>
-      <button ion-item (click)="close()">GitHub Repo</button>
-    </ion-list>
-  `
 })
 export class CarPage {
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http,public jsonp:Jsonp) {
   }
-  close() {
-    this.viewCtrl.dismiss();
+  allPrice;
+  shop_list:Array<any>;
+  ionViewWillEnter(){
+    this.jsonp.get('http://127.0.0.1:8080/c-car?callback=JSONP_CALLBACK').subscribe(data=>{
+      console.log(data['_body']);
+      this.shop_list=data['_body'];
+    },err=>{
+      console.log(err);
+    });
   }
-  // appType = 'message';
 
-  // apps: any = {
-  //   'message': [
-  //     {
-  //       name: '资产包转让',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '债权转让',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '固产转让',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '商业保理',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '典当担保',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '融资借贷',
-  //       path: 'assets/imgs/search.png'
-  //     }, {
-  //       name: '悬赏信息',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '尽职调查',
-  //       path: 'assets/imgs/search.png'
-  //     }
-  //   ],
-  //   'serve': [
-      
-  //     {
-  //       name: '资产包转让',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '债权转让',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '资产包转让',
-  //       path: 'assets/imgs/search.png'
-  //     },
-  //     {
-  //       name: '债权转让',
-  //       path: 'assets/imgs/search.png'
-  //     }
-      
-  //   ],
-
-  // };
-  // getItems(type:any){
-  //   return this.apps[type];
-   
-  // }
-
+  //商品添加
+  addNum(index){
+      ++this.shop_list[index].count; 
+      let finalPrice = 0;
+      let ll = document.getElementsByClassName("check");
+      for(let i =0;i<this.shop_list.length;i++){
+        if(ll[i].checked===true)
+        { 
+          finalPrice+=(this.shop_list[i].count*this.shop_list[i].ID);
+        }
+      }
+    this.allPrice = finalPrice;
+  }
+ //商品减少
+ reduceNum(index){
+   if(this.shop_list[index].count===0)return 
+    --this.shop_list[index].count;
+    let finalPrice = 0;
+      let ll = document.getElementsByClassName("check");
+      for(let i =0;i<this.shop_list.length;i++){
+        if(ll[i].checked===true)
+        { 
+          finalPrice+=(this.shop_list[i].count*this.shop_list[i].ID);
+        }
+      }
+    this.allPrice = finalPrice;
+ }
+//计算商品总价格
+numAllPrice(e){
+  let ll = document.getElementsByClassName("check");
+  let finalPrice = 0;
+  if(e.target.checked===false){
+    for(let i =0;i<this.shop_list.length;i++){
+      ll[i].checked=e.target.checked;
+    }
+    this.allPrice=0;
+  }else{
+    for(let i =0;i<this.shop_list.length;i++){
+      ll[i].checked=e.target.checked;
+      finalPrice+=(this.shop_list[i].count*this.shop_list[i].ID);
+    }
+    this.allPrice = finalPrice;
+  }  
+}
+//计算单个商品价格
+calculate(){
+  let finalPrice = 0;
+  let ll = document.getElementsByClassName("check");
+  for(let i =0;i<this.shop_list.length;i++){
+    if(ll[i].checked===true)
+    { 
+      finalPrice+=(this.shop_list[i].count*this.shop_list[i].ID);
+    }
+  }
+  this.allPrice = finalPrice;
+}
   ionViewDidLoad() {
     console.log('ionViewDidLoad CarPage');
   }
