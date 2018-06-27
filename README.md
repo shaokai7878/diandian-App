@@ -2,22 +2,22 @@
 《点点》是一款主打母婴产品的APP。
 
 ### 项目成员：
-* 吴鹏杰 (项目经理，产品，UI设计，客户端代码开发) 
+* 吴鹏杰 (项目经理，客户端代码开发，产品) 
     * Email: <abcdefj4201385@qq.com>
     * Github : [https://github.com/PennJay](https://github.com/PennJay) 
-* 张少凯 (服务器代码开发，产品) 
+* 张少凯 (服务器代码开发，产品，UI设计) 
     * Email: <1054764349@qq.com>
     * Github : [https://github.com/shokai7878](https://github.com/shaokai7878)
-* 刘雨帆 (客户端代码开发，测试)
+* 刘雨帆 (客户端代码开发，测试，UI设计)
     * Email: <1159075148@qq.com>
     * Github : [https://github.com/YuFanL](https://github.com/YuFanL)
-* 高鸿 (客户端代码开发，测试)
+* 高鸿 (客户端代码开发，测试，UI设计)
     * Email: <979956869@qq.com>
     * Github : [https://github.com/qiytan](https://github.com/qiytan)
-* 曹倩 (客户端代码开发，测试)
+* 曹倩 (客户端代码开发，测试，UI设计)
     * Email: <caoqiann@qq.com>
     * Github : [https://github.com/caoqiann](https://github.com/caoqiann)
-* 齐紫荆 (服务器代码开发，测试)
+* 齐紫荆 (服务器代码开发，测试，UI设计)
     * Email: <3304496257@qq.com>
     * Github : [github.com/qizijing](github.com/qizijing)
 
