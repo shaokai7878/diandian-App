@@ -8,11 +8,11 @@
 * 张少凯 (服务器代码开发，产品) 
     * Email: <1054764349@qq.com>
     * Github : [https://github.com/shokai7878](https://github.com/shaokai7878)
-* 刘宇帆 (客户端代码开发，测试)
+* 刘雨帆 (客户端代码开发，测试)
     * Email: <1159075148@qq.com>
     * Github : [https://github.com/YuFanL](https://github.com/YuFanL)
 * 高鸿 (客户端代码开发，测试)
-    * Email: <441007713@qq.com>
+    * Email: <979956869@qq.com>
     * Github : [https://github.com/qiytan](https://github.com/qiytan)
 * 曹倩 (客户端代码开发，测试)
     * Email: <caoqiann@qq.com>
