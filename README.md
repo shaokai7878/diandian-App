@@ -11,23 +11,17 @@
 
 后台采用node.js的express框架编写，数据库使用mysql进行交互。
 
-前端登陆页
+
 ![前端登陆页](./front/resorces/login.png)
 
-首页
 ![首页](./front/resorces/about.png)
 
-妈妈说
 ![妈妈说](./front/resorces/mom-say.png)
 
-文章发布操作
 ![文章发布](./front/resorces/write.png)
 
-附近页
 ![附近页](./front/resorces/fujin.png)
 
-购物车
 ![购物车](./front/resorces/car.png)
 
-我的
 ![我的](./front/resorces/mine.png)
