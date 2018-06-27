@@ -6,17 +6,10 @@
 ##前言
 也是这个月才正式的接触node，虽然上学期学过，但是在学习过程中，个人感觉还是要刁难刁难自己的。因为用ejs来写页面。
 项目主要实现用户的登录，数据库的CRUD，包括图片的上传，删除和修改等基本功能。
-关于登录，查询等操作本应该更加的严谨，这里只做简单演示。包括一些配置文件的编写。
-    
----
-
-***
 
 >ejs mysql nodejs express express-router...
 
-##效果图
-
-登录页
+登陆页
 ![登录页](./resources/login.png)
 
 后台管理首页
@@ -31,16 +24,16 @@
 操作
 ![操作](./resources/blog_o.png)
 
-##项目目录
 项目目录
 ![项目目录](./resources/project_str.png)
+
 ##整体架构
-项目重点在后端开发中，web端页面并没有涉及到，后端管理流程大致如下:
-* 路由控制分为admin，web，还是那句话，我们操作全部在admin中
+项目后端管理流程大致如下:
+* 路由控制分为admin，web，我们操作全部在admin中
 * 跳转到admin拦截所有的请求，判断用户是否登录
 * 未登录则重定向到登录，登陆成功后设置session。(https://my.oschina.net/Nealyang/blog/844049)
 * 登录后则可进行相关的操作，数据的增删改查等功能。
-##后端开发
+
 ###后台基本架构、路由设置
         const express = require('express');
         const expressStatic = require('express-static');
@@ -88,12 +81,12 @@
         
         //静态文件的请求
         server.use('/files',expressStatic('./static'));
-我的基本架构如下，关于每一部分的功能，都已经标注。关于路由的控制在admin/index.js跟server.js大同小异。
+关于路由的控制在admin/index.js跟server.js大同小异。
 ###登录功能
-登录功能这里主要说两点
+登录功能主要包含两点
 * 密码的md5签名（当然，大多数人说是md5加密）
 * session的应用
-在lib中存放着自己写的一些方法，作为一个库，admin初始化有三个用户，包括u/p：2015015312，zhangshaokai,123456.
+在lib中存放着自己写的一些方法，作为一个库，admin初始化有三个用户，包括u/p：2015015312，zhangshaokai,123456
 关于密码的签名方法主要如下：
         var crypto = require('crypto');
         
@@ -130,7 +123,7 @@ MD5_SUFFIX是加密字符串，用法如路由login.js：
                     res.status(400).send({code:400,data:[],msg:'parameters error'});
                 }
             });
-从上面的代码中也展现了什么时候设置session，并且值得提一下的是这里提供给前端页面的是接口，这样的话很多逻辑都放到了前端，后面我们都是通过页面渲染来输出的了。下面是所有请求的拦截判断：
+从上面的代码中也展现了什么时候设置session，这里提供给前端页面的是接口，这样的话很多逻辑都放到了前端，后面我们都是通过页面渲染来输出的了。下面是所有请求的拦截判断：
 
         router.use(function (req,res,next) {
                 if(!req.session['user_id'] && req.url != '/login'){
@@ -140,7 +133,7 @@ MD5_SUFFIX是加密字符串，用法如路由login.js：
                 }
             });
 
-##ejs前端页面的重点代码讲解
+##ejs前端页面
 公共头部的引入：
 
         <% include common/top.ejs %>
@@ -272,7 +265,7 @@ get方法请求如下：
 
 ##用户管理
 后台的管理大概也即是这么多，用户管理和博文管理基本都是差不多的，这里重点是说下，这里用到的图片上传。
-图片上传我用的是**multer**中间件，不知道的可以查下，注意用这个中间件接受图片上传时form表单的**enctype**必须要设置为multipart/form-data
+图片上传我用的是**multer**中间件，注意用这个中间件接受图片上传时form表单的**enctype**必须要设置为multipart/form-data
 
 关于图片上传后，默认是不包括后缀名的，所以这里我们需要用到fs模块的重命名操作，代码如下：
 
